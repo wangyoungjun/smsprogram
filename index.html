@@ -189,7 +189,7 @@
 
     <script>
         // ★★★ 여기에 Google Apps Script 배포 후 발급받은 웹앱 URL을 입력하세요 ★★★
-        const GOOGLE_SCRIPT_URL = '여기에_복사한_구글앱스스크립트_URL을_붙여넣으세요';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby5J_JLLixjISptCW5vk-cIk1AB7XFcGj_kul9D52rxAsyi4BSAau3tjQbYFU3rXLo5XA/exec';
 
         const form = document.getElementById('transitionForm');
         const submitBtn = document.getElementById('submitBtn');
@@ -219,11 +219,6 @@
 
         form.addEventListener('submit', e => {
             e.preventDefault();
-            
-            if(GOOGLE_SCRIPT_URL === '여기에_복사한_구글앱스스크립트_URL을_붙여넣으세요') {
-                showModal('안내', '구글 스프레드시트 연동 URL을 먼저 입력해주세요. (코드 내 GOOGLE_SCRIPT_URL 확인)', false);
-                return;
-            }
 
             // 버튼 상태 변경
             submitBtn.disabled = true;
